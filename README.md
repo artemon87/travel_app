@@ -3,7 +3,7 @@ WEB API with Flask
 
 ## Domain:
 Trip Calculator
-##Interface:
+## Interface:
 Web Api (using Flask)
 
 # Note
@@ -24,20 +24,19 @@ Web Api (using Flask)
 -Get method will only read and return the previously saved result from the json file
 
 # Python Sample:
-import requests
-import json
-
-payload = {}
-payload['travelers'] = {}
-payload['travelers']['Artem'] = [30,1,3]
-payload['travelers']['Max'] = [20,10,10]
-payload['travelers']['Nyk'] = [14]
-payload['travelers']['Tata'] = [30,6]
-payload['travelers']['Ly1'] = [70,4]
-
-url = 'http://0.0.0.0:8005/v1/calculate'
-headers = {'Content-Type' : 'application/json'}
-
-res = requests.get(url, headers = headers, data = json.dumps(payload))
-res.json()
+    import requests
+    import json
+    
+    payload = {}
+    payload['travelers'] = {}
+    payload['travelers']['Artem'] = [30,1,3]
+    payload['travelers']['Max'] = [20,10,10]
+    payload['travelers']['Nyk'] = [14]
+    payload['travelers']['Tata'] = [30,6]
+    payload['travelers']['Ly1'] = [70,4]
+    url = 'http://0.0.0.0:8005/v1/calculate'
+    headers = {'Content-Type' : 'application/json'}
+    res = requests.get(url, headers = headers, data = json.dumps(payload))
+    res.json()
+    
 

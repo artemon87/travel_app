@@ -19,9 +19,11 @@ Web Api (using Flask)
 -Tests are included under app_resources folder. To run simply type 'pytest' (this will look for any files starting with 'test_' keyword and run them, thus you dont have to be inside app_resource dir)  
 
 # To Know:
--Only GET and POST methods are supported by /v1/calculate api endpoint
+! Only GET and POST methods are supported by /v1/calculate api endpoint
 * POST method will do all the hard work (calculations) and return the result
 * GET method will only read and return the previously saved result from the json file
+* Access port is 8005
+* Full API: http://0.0.0.0:8005/v1/calculate
 
 # Python Sample:
     import requests
@@ -36,7 +38,8 @@ Web Api (using Flask)
     payload['travelers']['Ly1'] = [70,4]
     url = 'http://0.0.0.0:8005/v1/calculate'
     headers = {'Content-Type' : 'application/json'}
-    res = requests.get(url, headers = headers, data = json.dumps(payload))
+    
+    res = requests.post(url, headers = headers, data = json.dumps(payload))
     res.json()
     
 

@@ -1,1 +1,10 @@
-[]
+[
+  "app_resources/test_resources.py::test_most_spent_order",
+  "app_resources/test_resources.py::test_get_total_spent",
+  "app_resources/test_resources.py::test_disbursement_helper",
+  "app_resources/test_resources.py::test_pay_back_to",
+  "app_resources/test_resources.py::test_disbursement",
+  "app_resources/test_resources.py::test_api_normal",
+  "app_resources/test_resources.py::test_api_missing_json",
+  "app_resources/test_resources.py::test_api_invalid_content"
+]

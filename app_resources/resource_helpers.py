@@ -85,8 +85,6 @@ def disbursement_helper(arr = None, average = 0):
     for traveler in arr:
         current += 1
         amount_to_pay_back = average - traveler.total
-        if traveler.name == 'Nyk':
-            print('Nyk amount_to_pay_back {}'.format(amount_to_pay_back))
         if amount_to_pay_back > 0:
             
             pool = amount_to_pay_back
@@ -107,23 +105,16 @@ def pay_back_to(arr = None, traveler = None, average = 0, pool = 0):
         only proceed if getter is expecting to get some money back
         """
 
-        if traveler.name == 'Nyk':
-            print('Nyk will pay {}'.format(getter.name))
-
         if getter.total > average:
             visited += 1
             exchange = average + pool - getter.total
 
-            if traveler.name == 'Nyk':
-                print('Nyk exchange {}'.format(exchange))
 
             if exchange >= 0:
                 """
                 pool has more than getter needs
                 """
                 pay = pool - exchange
-                if traveler.name == 'Nyk':
-                    print('Nyk pay {}'.format(pay))
                 pool -= pay
                 getter.total -= pay
                 traveler.set_own_to(name = getter.name, amount = round(pay, 2))
@@ -131,8 +122,6 @@ def pay_back_to(arr = None, traveler = None, average = 0, pool = 0):
                 """
                 pool has less than getter needs
                 """
-                if traveler.name == 'Nyk':
-                    print('Nyk pool {}'.format(pool))
                 getter.total -= pool
                 traveler.set_own_to(name = getter.name, amount = round(pool, 2))
                 pool = 0

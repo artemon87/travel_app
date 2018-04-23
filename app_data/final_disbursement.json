@@ -1,1 +1,1 @@
-{"Artem": {"owns to": {}}, "Max": {"owns to": {}}, "Nyk": {"owns to": {"Artem": 15.0}}, "Tata": {"owns to": {"Artem": 20.0}}, "Ly": {"owns to": {"Max": 20.0}}}
+{"Artem": {"owns to": {}}, "Max": {"owns to": {}}, "Tata": {"owns to": {}}, "Luka": {"owns to": {"Artem": 4.0, "Max": 4.0}}, "Eva": {"owns to": {"Artem": 6.0}}}
